@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\VehicleController;
-use App\Http\Controllers\InsuranceController;
-use App\Http\Controllers\SviController;
-use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +16,6 @@ use App\Http\Controllers\ServiceController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-Route::apiResource('/api/vehicles', VehicleController::class);
-Route::apiResource('/api/vehicles.insurances', InsuranceController::class);
-Route::apiResource('/api/vehicles.svis', SviController::class);
-Route::apiResource('/api/vehicles.services', ServiceController::class);
 
 // Route::get('/token', function () {
 //     return csrf_token();
