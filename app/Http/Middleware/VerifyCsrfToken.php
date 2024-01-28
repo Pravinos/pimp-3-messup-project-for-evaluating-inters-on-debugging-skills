@@ -12,7 +12,12 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
-         '/api/*'
+    /**
+     * CSRF tokens are used to protect against
+     * malicious requests from other websites. APIs, being stateless,
+     * don't rely on session-based CSRF protection. Therefore, API routes
+     * are excluded from CSRF token verification to allow stateless communication.
+     */
+    '/api/*'
     ];
 }
