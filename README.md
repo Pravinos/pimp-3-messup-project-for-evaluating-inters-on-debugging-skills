@@ -1,5 +1,25 @@
 # Pimp My Ride
 
+## Changes made by Thomas
+-Created a local .env file based on the .env example and added the full database path to DB_DATABASE for establishing a connection between the database and the application.
+
+-Changed the default database connection type to SQLite in the config/database.php file.
+
+-Run a set of php artisan commands to initialize the application (migrate, seed, serve, generate:key).
+
+-Renamed the Insurances model to Insurance to ensure consistency in using singular names for all models, and applied this change to all affected files.
+
+-Moved API routes from web.php to api.php to enhance organization and separation of concerns.
+
+-Made necessary fixes in the Controllers' methods to ensure proper functionality of API requests.
+
+-Added /api/* to the CSRF validation exception list. CSRF validation was preventing some requests (POST, PUT), and after investigation, it was found unnecessary for API endpoints.
+
+-Tested the endpoints using POSTMAN for validation and functionality.
+
+
+
+
 ## Description
 - This is an educational app to teach the implementation of a RESTful API.
 
